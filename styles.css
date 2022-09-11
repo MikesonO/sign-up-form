@@ -41,12 +41,31 @@
   background-color: var(--black);
   opacity: 50%;
   position: relative;
-  top: 20vh;
+  top: 10vh;
 }
 
 .form-section{
   background-color: var(--white);
   width: 60vw;
+}
+
+.form-section > div{
+  width: 100%;
+}
+
+.heading{
+  background-color: var(--black);
+  height: 30vh;
+}
+
+.form{
+  background-color: var(--white);
+  height: 40vh;
+}
+
+.submit{
+  background-color: var(--black);
+  height: 30vh;
 }
 
 /* ID SELECTORS */
