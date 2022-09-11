@@ -1,0 +1,37 @@
+/* VARIABLE */
+:root{
+
+}
+
+/* ELEMENT SELECTORS */
+*,
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* CLASS SELECTORS */
+
+.container{
+  display: flex;
+}
+
+.container > div{
+  height: 100vh;
+}
+
+.title-section{
+  background-color: red;
+  width:40vw;
+}
+
+.form-section{
+  background-color: blue;
+  width: 60vw;
+}
+
+/* ID SELECTORS */
