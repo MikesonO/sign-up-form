@@ -2,6 +2,8 @@
 :root{
   --white: #ffffff;
   --black: 0,0,0;
+  --white-smoke: #f3f2ee;
+
 
 }
 
@@ -78,11 +80,26 @@ body{
 
 .form-section > div{
   width: 100%;
+  position: relative;
+  padding: 0 40px;
 }
 
 .heading{
-  background-color: var(--black);
+  background-color: var(--white-smoke);
   height: 30vh;
+  position: absolute;
+}
+
+.heading-text{
+  position: absolute;
+  bottom: 0;
+  width: 40vw;
+  font-size: 1.12rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 25px;
 }
 
 .form{
@@ -91,7 +108,7 @@ body{
 }
 
 .submit{
-  background-color: var(--black);
+  background-color: var(--white-smoke);
   height: 30vh;
 }
 
