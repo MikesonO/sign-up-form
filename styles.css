@@ -148,6 +148,10 @@ input:-webkit-autofill:active {
   margin-bottom: 25px;
 }
 
+.text-1{
+  line-height: 1.5;
+}
+
 .form{
   background-color: var(--white);
   box-shadow: 0px 7.5px 20px -15px rgba(var(--black),0.75);
@@ -202,4 +206,10 @@ input:-webkit-autofill:active {
   font-weight: bold;
 }
 
-/* ID SELECTORS */
+.made-by{
+  text-decoration: none;
+  position: absolute;
+  bottom:1vh;
+  right: 1vw;
+  color: var(--brown);
+}
