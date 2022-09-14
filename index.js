@@ -15,6 +15,8 @@ form.addEventListener("focusout", event => {
     checkLastName();
   } else if (event.target == email){
     checkEmail();
+  } else if (event.target == phone_number){
+    checkPhoneNumber();
   }
   
   
@@ -56,37 +58,23 @@ function checkLastName(){
     }
   }
 
-
-
-
-
-
-
-
-
-function checkInputs() {
-  const fNameValue = fName.value.trim();
-  const lNameValue = lName.value.trim();
-  const emailValue = email.value.trim();
-  const phone_numberValue = phone_number.value.trim();
-  const passwordValue = password.value.trim();
-  const password2Value = password2.value.trim();
-
-
-	if(fNameValue === "") {
-		setErrorFor(fName, "First Name cannot be blank");
-	} else {
-		setSuccessFor(fName);
-	}
-
-
-  if(lNameValue !== "") {
-    setSuccessFor(lName);
-  } else {
-    removeSuccess(lName)
+  //Check Phone Number
+  function checkPhoneNumber(){
+    const phone_numberValue = phone_number.value.trim();;
+    if(phone_numberValue == 0){
+      removeSuccessFor(phone_number);
+    } else if (/^(?:\W*\d){11}\W*$/.test(phone_numberValue)){
+      setSuccessFor(phone_number);
+    } else {
+      setErrorFor(phone_number, "Please enter a valid phone number");
   }
-
 }
+
+
+
+const passwordValue = password.value.trim();
+const password2Value = password2.value.trim();
+
 
 
 
