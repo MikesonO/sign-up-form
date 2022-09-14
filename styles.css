@@ -70,7 +70,7 @@ input:focus:valid {
 }
 
 .input.error i.fa-circle-exclamation,
-.input.error small{
+.input.error .error-text{
   visibility: visible;
   color: var(--error-red);
 }
@@ -246,4 +246,11 @@ input:-webkit-autofill:active {
   bottom:1vh;
   right: 1vw;
   color: var(--brown);
+}
+
+
+/* ID SELECTORS */
+
+#format{
+  visibility: visible;
 }
