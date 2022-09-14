@@ -43,18 +43,36 @@ input{
 }
 
 input:focus {
-  border: none;
   box-shadow: 4px 4px 5px rgba(var(--black), 0.25);
   outline: none;
 }
 
-input:invalid:focus {
+/* input:invalid:focus {
   border: 2px solid var(--error-red);
 }
 
 input:focus:valid {
   border: 2px solid var(--valid-green);
   background: var(--white-smoke);
+} */
+
+.input.success input{
+  border-color: var(--valid-green);
+}
+
+.input.error input{
+  border-color: var(--error-red);
+}
+
+.input.success i.fa-circle-check{
+  visibility: visible;
+  color: var(--valid-green);
+}
+
+.input.error i.fa-circle-exclamation,
+.input.error small{
+  visibility: visible;
+  color: var(--error-red);
 }
 
 input:-webkit-autofill,
@@ -171,18 +189,19 @@ input:-webkit-autofill:active {
 }
 
 .form i{
+  visibility: hidden;
   position: absolute;
   top: 27.5px;
   right: 1rem;
 }
 
 .form small{
+  visibility: hidden;
   position: absolute;
   bottom: -17px;
   left: 0;
   font-size: 0.7rem;
 }
-
 
 .submit{
   background-color: var(--white-smoke);
