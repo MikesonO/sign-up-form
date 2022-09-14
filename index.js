@@ -7,20 +7,14 @@ const password = document.getElementById("user_password");
 const password2 = document.getElementById("confirm_password");
 
 
-// form.addEventListener("submit", event => {
-//   event.preventDefault();
-
-//   checkInputs();
-// });
-
-
-
 form.addEventListener("focusout", event => {
 
   if(event.target==fName){
     checkFirstName();
   } else if (event.target == lName){
     checkLastName();
+  } else if (event.target == email){
+    checkEmail();
   }
   
   
@@ -49,6 +43,19 @@ function checkLastName(){
   }
 
 }
+
+//Check Email
+  function checkEmail(){
+    const emailValue = email.value.trim();
+    if(emailValue.length == 0){
+      setErrorFor(email, "Email cannot be blank");
+    } else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailValue)){
+      setSuccessFor(email);
+    } else {
+      setErrorFor(email, "Please enter a valid email address");
+    }
+  }
+
 
 
 
