@@ -44,10 +44,10 @@
       </div>
       <div class="form">
         <p>Let's do this!</p>
-        <form id="sign-up-form"action="/" method="GET">
+        <form id="sign-up-form"action="" method="GET">
           <div class="input">
             <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" required >
+            <input type="text" id="first_name" required>
             <i class="fa-solid fa-circle-check"></i>
             <i class="fa-solid fa-circle-exclamation"></i>
             <small class="error-text">Error message</small>
@@ -76,14 +76,15 @@
           </div>
           <div class="input">
             <label for="user_password">Password:</label>
-            <input type="password" id="user_password" name="password" >
+            <input type="password" id="user_password" name="password" pattern="//^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/" required>
             <i class="fa-solid fa-circle-check"></i>
             <i class="fa-solid fa-circle-exclamation"></i>
+            <small id="password-error">Must contain at least one  number, uppercase and lowercase letter, and at least 8 or more characters</small>
             <small class="error-text">Error message</small>
           </div>
           <div class="input">
             <label for="confirm_password">Confirm Password:</label>
-            <input type="password" id="confirm_password" name="confirm_password" >
+            <input type="password" id="confirm_password" name="confirm_password" required>
             <i class="fa-solid fa-circle-check"></i>
             <i class="fa-solid fa-circle-exclamation"></i>
             <small class="error-text">Error message</small>

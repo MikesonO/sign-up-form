@@ -254,3 +254,8 @@ input:-webkit-autofill:active {
 #format{
   visibility: visible;
 }
+
+#password-error{
+  color: var(--error-red);
+  bottom: -2rem;
+}

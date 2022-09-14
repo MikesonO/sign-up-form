@@ -6,6 +6,7 @@ const phone_number = document.getElementById("phone_number");
 const password = document.getElementById("user_password");
 const password2 = document.getElementById("confirm_password");
 const small2 = document.getElementById("format");
+const password_error = document.getElementById("password-error");
 
 
 form.addEventListener("focusout", event => {
@@ -51,6 +52,8 @@ function checkLastName() {
 
 }
 
+
+
 //Check Email
 function checkEmail() {
   const emailValue = email.value.trim();
@@ -77,6 +80,43 @@ function checkPhoneNumber() {
 }
 
 
+//Check Password
+function checkPassword() {
+  const passwordValue = password.value.trim();
+  const password2Value = password2.value.trim();
+  if (passwordValue == 0){
+    setErrorFor(password, "Password cannot be blank");
+    password_error.style.visibility = "hidden";
+  } else if(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(passwordValue) == false){
+   setErrorFor(password, "");
+   password_error.style.visibility = "visible";
+  } else if(password2Value == 0){
+    removeErrorFor(password);
+    password_error.style.visibility = "hidden";
+  } else if(passwordValue !== password2Value) {
+    removeSuccessFor(password);
+    password_error.style.visibility = "hidden";
+    setErrorFor(password2, 'Passwords does not match');
+  } 
+}
+
+function checkPassword2() {
+  const passwordValue = password.value.trim();
+  const password2Value = password2.value.trim();
+  if(password2Value == 0) {
+    setErrorFor(password2, 'Password confirmation cannot be blank');
+  } else if(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(passwordValue) == false){
+    setErrorFor(password, "");
+    password_error.style.visibility = "visible";
+  }else if(passwordValue !== password2Value) {
+    removeSuccessFor(password);
+    setErrorFor(password2, 'Passwords does not match');
+  } else{
+    setSuccessFor(password);
+    setSuccessFor(password2);
+  }
+
+}
 
 
 function setErrorFor(input, message) {
