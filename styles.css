@@ -259,3 +259,76 @@ input:-webkit-autofill:active {
   color: var(--error-red);
   bottom: -2rem;
 }
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 1000px){
+  .title{
+    font-size: 3rem;
+  }
+  
+
+}
+
+@media screen and (max-width: 800px){
+  .container{
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .title-section{
+    width: 100vw;
+    height: 60vh;
+  }
+
+  .form-section{
+    width:100%;
+  }
+
+ /* HEADING SECTION */
+
+  .heading{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heading-text{
+    position: static;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  /* FORM SECTION */
+
+  .form{
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .input{
+    width:60vw;
+    margin: 0 auto;
+  }
+
+  /* SUBMIT SECTION */
+
+  .submit-btn{
+    margin: 0 auto;
+    width: 200px;
+left: 0;
+right: 0;
+text-align: center;
+  }
+
+  .submit{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+}
