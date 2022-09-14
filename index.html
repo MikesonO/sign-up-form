@@ -6,6 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up</title>
+  <!-- FAVICON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+<link rel="manifest" href="./favicon/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +51,7 @@
       </div>
       <div class="form">
         <p>Let's do this!</p>
-        <form id="sign-up-form"action="" method="GET">
+        <form id="sign-up-form" action="" method="GET">
           <div class="input">
             <label for="first_name">First Name:</label>
             <input type="text" id="first_name" required>
@@ -68,7 +75,7 @@
           </div>
           <div class="input">
             <label for="phone_number">Phone Number:</label>
-            <input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{5}-[0-9]{6}" > 
+            <input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{5}-[0-9]{6}">
             <small id="format">Format: 07911-123456</small>
             <i class="fa-solid fa-circle-check"></i>
             <i class="fa-solid fa-circle-exclamation"></i>
@@ -76,10 +83,12 @@
           </div>
           <div class="input">
             <label for="user_password">Password:</label>
-            <input type="password" id="user_password" name="password" pattern="//^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/" required>
+            <input type="password" id="user_password" name="password"
+              pattern="//^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/" required>
             <i class="fa-solid fa-circle-check"></i>
             <i class="fa-solid fa-circle-exclamation"></i>
-            <small id="password-error">Must contain at least one  number, uppercase and lowercase letter, and at least 8 or more characters</small>
+            <small id="password-error">Must contain at least one number, uppercase and lowercase letter, and at least 8
+              or more characters</small>
             <small class="error-text">Error message</small>
           </div>
           <div class="input">
@@ -95,7 +104,8 @@
       <div class="submit">
         <p class="submit-text">Already a member? Click <a class="submit-link" href="index.html">here</a> to login.</p>
 
-        <a class="made-by" href="https://github.com/MikesonO/sign-up-form">MikesonO <i class="fa-brands fa-github"></i></a>
+        <a class="made-by" href="https://github.com/MikesonO/sign-up-form">MikesonO <i
+            class="fa-brands fa-github"></i></a>
 
       </div>
     </div>
