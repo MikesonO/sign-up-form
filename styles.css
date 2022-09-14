@@ -167,7 +167,22 @@ input:-webkit-autofill:active {
   flex-direction: column;
   gap: 5px;
   width: 20vw;
+  position: relative;
 }
+
+.form i{
+  position: absolute;
+  top: 27.5px;
+  right: 1rem;
+}
+
+.form small{
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  font-size: 0.7rem;
+}
+
 
 .submit{
   background-color: var(--white-smoke);
