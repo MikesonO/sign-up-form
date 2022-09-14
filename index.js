@@ -105,13 +105,13 @@ function checkPassword2() {
   const password2Value = password2.value.trim();
   if(password2Value == 0) {
     setErrorFor(password2, 'Password confirmation cannot be blank');
+  } else if(passwordValue !== password2Value) {
+    removeSuccessFor(password);
+    setErrorFor(password2, 'Passwords does not match');
   } else if(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(passwordValue) == false){
     setErrorFor(password, "");
     password_error.style.visibility = "visible";
-  }else if(passwordValue !== password2Value) {
-    removeSuccessFor(password);
-    setErrorFor(password2, 'Passwords does not match');
-  } else{
+  }else{
     setSuccessFor(password);
     setSuccessFor(password2);
   }
